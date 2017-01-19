@@ -1,0 +1,23 @@
+---
+# Main Styles
+---
+
+$footerHeight: 60px;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: $footerHeight;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footerHeight;
+  line-height: $footerHeight;
+  background-color: #f5f5f5;
+}

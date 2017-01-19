@@ -1,0 +1,25 @@
+{
+  "name": "footwork-website",
+  "description": "A solid footing for knockout applications.",
+  "homepage": "http://footworkjs.com",
+  "license": "MIT",
+  "keywords": [
+    "knockout",
+    "SPA",
+    "framework"
+  ],
+  "author": "Jonathan Newman <jonathan@staticty.pe>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/footworkjs/footwork-website.git"
+  },
+  "dependencies": {
+    "jquery": "*",
+    "footwork": "#c7eb67c39f653fe9f3d6cb9ab4988ac41cf04783",
+    "bootstrap": "v4.0.0-alpha.6",
+    "requirejs": "^2.3.2",
+    "text": "requirejs-text#^2.0.15",
+    "es6-promise": "^4.0.5",
+    "fetch": "^2.0.1"
+  }
+}
