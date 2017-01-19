@@ -4,10 +4,10 @@
   {% include head.html %}
 
   <body>
-    <router module="Router" class="container">
+    <router module="Router">
       {% include header.html %}
 
-      <main class="page-content" aria-label="Content">
+      <main class="page-content container" aria-label="Content">
         <outlet name="main"></outlet>
       </main>
     </router>
