@@ -7,11 +7,23 @@
     <router module="Router">
       {% include header.html %}
 
-      <outlet name="main" class="page-content container" aria-label="Content"></outlet>
+      <outlet name="main" class="page-content" aria-label="Content"></outlet>
     </router>
 
     {% include footer.html %}
 
+    <script>
+      window.docs_list_endpoint = '{{ site.docs_list_endpoint }}';
+      window.posts = [
+        {% for post in site.posts %}
+          {
+            date: '{{ post.date }}',
+            url: '{{ post.url | relative_url }}',
+            title: '{{ post.title | escape }}'
+          }
+        {% endfor %}
+      ];
+    </script>
     <script src="{{ "/assets/bower_components/requirejs/require.js" | relative_url }}" data-main="/assets/main.js"></script>
   </body>
 

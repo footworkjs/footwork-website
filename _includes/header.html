@@ -20,6 +20,17 @@
               </li>
             {% endif %}
           {% endfor %}
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="closed glyphicon glyphicon-menu-down"></span><span class="open glyphicon glyphicon-menu-up"></span></a>
+            <ul class="dropdown-menu">
+              <docs-list></docs-list>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           {% for my_page in site.pages %}

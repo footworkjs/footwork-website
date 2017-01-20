@@ -17,6 +17,12 @@ define(['footwork'], function (fw) {
           controller: function () {
             this.outlet('main', 'about-page');
           }
+        },
+        {
+          route: '/news/:year/:month/:day/:post',
+          controller: function showNewsBlog (params) {
+            console.info(params);
+          }
         }
       ]
     });

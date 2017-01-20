@@ -1,0 +1,8 @@
+<!-- ko foreach: posts -->
+<div class="post">
+  <a data-bind="route: { url: $data.url }">
+    <span data-bind="text: title"></span>
+    <span data-bind="text: date"></span>
+  </a>
+</div>
+<!-- /ko -->

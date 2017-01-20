@@ -1,10 +1,6 @@
 ---
-layout: page
+layout: home
 ---
-
-<img class="main-logo" src="{{ "/assets/images/footwork.svg" | relative_url}}" alt="Footwork Home">
-
-<hr>
 
 # What is it?
 
@@ -25,3 +21,7 @@ It has features such as:
 Knockout applications have typically not been as fully featured or as capable as applications based on other, more featureful libraries/frameworks. Footwork aims to fill that void providing a comporably complete framework with unique architectural advantages.
 
 Aimed at users or fans of [KnockoutJS](http://knockoutjs.com/), if you are in that category you should definitely take a look.
+
+# The Latest
+
+<blog-posts></blog-posts>

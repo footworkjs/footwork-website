@@ -1,6 +1,7 @@
 require.config({
   paths: {
     "jquery": "/assets/bower_components/jquery/dist/jquery",
+    "lodash": "/assets/bower_components/lodash/dist/lodash",
     "text": "/assets/bower_components/text/text",
     "footwork": "/assets/bower_components/footwork/dist/footwork",
     "es6-promise": "/assets/bower_components/es6-promise/es6-promise",
@@ -20,13 +21,24 @@ require.config({
   },
 });
 
-require(['footwork', 'router', 'es6-promise', 'fetch', 'bootstrap'],
-  function (fw, Router, promise) {
+require(['footwork', 'lodash', 'router', 'es6-promise', 'fetch', 'bootstrap'],
+  function (fw, _, Router, promise) {
     promise.polyfill();
 
-    window.fw = fw;
+    fw.options.fetchOptions = {
+      credentials: 'same-origin',
+      mode: 'cors'
+    };
+
+    _.each(window.posts, function (post) {
+      console.info(post);
+    });
+
     fw.router.register('Router', Router);
+    fw.components.registerLocation(['docs-list', 'blog-posts'], '/js/', true);
 
     fw.start();
+
+    window.fw = fw;
   }
 );

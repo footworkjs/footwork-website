@@ -1,10 +1,23 @@
 $logoHeight: 40px;
 $navHeight: 60px;
-$navColor: #1384ee;
+$navColor: $primaryColor;
 
 header {
-  margin-bottom: 15px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  .nav {
+    .open {
+      & > a, & > a:active {
+        background: lighten($navColor, 10%) !important;
+      }
+    }
+
+    a {
+      margin: 0;
+    }
+
+    a.active, a:focus {
+      background: rgba(0,0,0,0.1);
+    }
+  }
 
   .navbar {
     min-height: $navHeight;
@@ -14,11 +27,58 @@ header {
     border: none;
     margin: 0;
 
+    .dropdown {
+      .glyphicon {
+        margin-left: 10px;
+        font-size: 15px;
+      }
+
+      a {
+        .closed {
+          display: inline;
+        }
+        .open {
+          display: none;
+        }
+      }
+
+      &.open a {
+        .open {
+          display: inline;
+        }
+        .closed {
+          display: none;
+        }
+      }
+    }
+
+    .dropdown-header {
+      color: white;
+    }
+
+    .dropdown-menu {
+      border: none;
+      background: lighten($navColor, 10%);
+      color: white;
+
+      .divider {
+        background-color: darken($navColor, 10%);
+      }
+
+      a {
+        color: lighten($navColor, 30%);
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
     li > a {
       color: white;
 
       &:hover {
-        background: rgba(255,255,255,0.2);
+        background: lighten($navColor, 10%);
       }
     }
   }
@@ -36,20 +96,13 @@ header {
       margin-left: 15px;
     }
 
-    a {
-      margin: 0;
-    }
-
-    a.active, a:focus {
-      background: rgba(0,0,0,0.1) !important;
-    }
-
     .logo {
       height: 40px;
       position: relative;
       float: left;
       top: ($navHeight / 2);
       margin-top: -($logoHeight / 2);
+      margin-right: 15px;
     }
   }
 }
