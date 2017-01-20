@@ -16,9 +16,6 @@ require.config({
   map: {
     "bootstrap": {
       "tether": "expose-tether"
-    },
-    "expose-tether": {
-      "tether": "tether"
     }
   },
 });

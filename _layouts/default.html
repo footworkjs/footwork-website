@@ -7,9 +7,7 @@
     <router module="Router">
       {% include header.html %}
 
-      <main class="page-content container" aria-label="Content">
-        <outlet name="main"></outlet>
-      </main>
+      <outlet name="main" class="page-content container" aria-label="Content"></outlet>
     </router>
 
     {% include footer.html %}
