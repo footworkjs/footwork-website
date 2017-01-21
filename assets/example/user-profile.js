@@ -7,8 +7,8 @@ function UserProfile () {
     }
   });
 
-  self.name = fw.observable().mapTo('name', self);
-  self.id = fw.observable(window.userId).mapTo('id', self);
+  self.name = fw.observable().map('name', self);
+  self.id = fw.observable(window.userId).map('id', self);
 }
 
 

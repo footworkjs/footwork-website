@@ -2,14 +2,16 @@ function Router () {
   var self = fw.router.boot(this, {
     routes: [
       {
-        route: '/about',
+        route: '/',
         controller: function () {
-          this.outlet('main-display', 'about-page');
+          this.outlet('main-display', 'index-page');
         }
       }, {
-        route: '/news',
-        controller: function () {
-          this.outlet('main-display', 'news-page');
+        route: '/news/:article',
+        controller: function (params) {
+          this.outlet('main-display', 'news-page', {
+            params: params
+          });
         }
       }
     ]
