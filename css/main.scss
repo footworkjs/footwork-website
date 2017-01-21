@@ -2,6 +2,19 @@
 # Main Styles
 ---
 
+@mixin clearblock() {
+  display: block;
+
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+}
+
 $footerHeight: 60px;
 $primaryColor: #4584e1;
 
@@ -24,6 +37,26 @@ body {
 
   .top-section {
     background: $primaryColor;
+    @include clearblock;
+
+    pre {
+      margin-bottom: 15px;
+      padding: 0;
+      border: none;
+    }
+
+    .col {
+      float: left;
+      width: 33%;
+      padding: 0 15px;
+
+      &:first-child {
+        padding-right: 0;
+      }
+      &:last-child {
+        padding-left: 0;
+      }
+    }
   }
 }
 
