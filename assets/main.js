@@ -6,6 +6,7 @@ require.config({
     "footwork": "/assets/bower_components/footwork/dist/footwork",
     "es6-promise": "/assets/bower_components/es6-promise/es6-promise",
     "fetch": "/assets/bower_components/fetch/fetch",
+    "highlightjs": "/assets/bower_components/highlightjs/highlight.pack",
     "router": "/assets/router",
     "tether": "/assets/bower_components/tether/dist/js/tether",
     "bootstrap": "/assets/bower_components/bootstrap/dist/js/bootstrap",

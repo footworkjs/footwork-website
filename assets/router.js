@@ -1,4 +1,4 @@
-define(['footwork'], function (fw) {
+define(['footwork', 'jquery', 'highlightjs'], function (fw, $) {
   fw.components.registerLocation('main-page', { template: '/main.html' });
   fw.components.registerLocation('about-page', { template: '/about/index.html' });
 
@@ -9,7 +9,11 @@ define(['footwork'], function (fw) {
         {
           route: '/',
           controller: function () {
-            this.outlet('main', 'main-page');
+            this.outlet('main', { display: 'main-page', onComplete: function (container) {
+              $(container).find('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+              });
+            }});
           }
         },
         {

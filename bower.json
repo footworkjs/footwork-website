@@ -21,6 +21,7 @@
     "text": "requirejs-text#^2.0.15",
     "es6-promise": "^4.0.5",
     "fetch": "^2.0.1",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "highlightjs": "^9.9.0"
   }
 }
