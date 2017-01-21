@@ -17,15 +17,19 @@
 
 $footerHeight: 60px;
 $primaryColor: #4584e1;
+$pageBackground: #fff;
 
 html {
   position: relative;
   min-height: 100%;
+  background: $pageBackground;
 }
 
 body {
   margin-bottom: $footerHeight;
   font-size: 18px;
+  background: $pageBackground;
+  overflow-y: scroll;
 
   .main-logo {
     width: 500px;
@@ -38,6 +42,8 @@ body {
   .top-section {
     background: $primaryColor;
     @include clearblock;
+    overflow: hidden;
+    box-shadow: 0 1px 22px -4px black;
 
     pre {
       margin-bottom: 15px;
@@ -51,11 +57,27 @@ body {
       padding: 0 15px;
 
       &:first-child {
-        padding-right: 0;
+        padding: 0;
       }
       &:last-child {
-        padding-left: 0;
+        padding: 0;
       }
+    }
+  }
+
+  .top-section + * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .top-section {
+    padding-top: 15px;
+
+    .example.container {
+      display: none !important;
     }
   }
 }

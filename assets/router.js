@@ -15,31 +15,7 @@ define(['footwork', 'jquery', 'highlightjs'], function (fw, $) {
         {
           route: '/',
           controller: function () {
-            this.outlet('main', {
-              display: 'main-page',
-              onComplete: function (container) {
-                var $examples = $(container).find('.example.container');
-
-                var loaded = 0;
-                function triggerAfterLoad () {
-                  loaded++;
-                  if(loaded > 1) {
-                    $(container).find('pre code').each(function(i, block) {
-                      hljs.highlightBlock(block);
-                    });
-                  }
-                }
-
-                fetch('/assets/example/example.js').then(handleTextResponse).then(function (data) {
-                  $examples.find('.javascript').text(data);
-                  triggerAfterLoad();
-                });
-                fetch('/assets/example/example.html').then(handleTextResponse).then(function (data) {
-                  $examples.find('.html').text(data);
-                  triggerAfterLoad();
-                });
-              }
-            });
+            this.outlet('main', 'main-page');
           }
         },
         {
