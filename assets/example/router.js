@@ -4,12 +4,12 @@ function Router () {
       {
         route: '/',
         controller: function () {
-          this.outlet('main-display', 'index-page');
+          self.outlet('main-display', 'index-page');
         }
       }, {
-        route: '/news/:article',
+        route: '/news(/:article)',
         controller: function (params) {
-          this.outlet('main-display', 'news-page', {
+          self.outlet('main-display', 'news-page', {
             params: params
           });
         }
