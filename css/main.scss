@@ -31,6 +31,59 @@ body {
   background: $pageBackground;
   overflow-y: scroll;
 
+  em.intro {
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 50px 0;
+  }
+
+  .intro-paragraph {
+    @include clearblock;
+    margin: 50px 0;
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    em {
+      font-weight: bold;
+    }
+
+    img {
+      width: 80%;
+    }
+
+    table {
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      thead {
+        border-bottom: 1px solid #aaa;
+      }
+
+      tbody td {
+        border: 1px solid #aaa;
+        border-radius: 3px;
+      }
+
+      img {
+        border-radius: 5px;
+      }
+    }
+  }
+
+  main {
+    padding: 20px 0;
+  }
+
+  h1 {
+    clear: both;
+  }
+
   .main-logo {
     width: 500px;
     max-width: 100%;
@@ -43,12 +96,16 @@ body {
     background: $primaryColor;
     @include clearblock;
     overflow: hidden;
-    box-shadow: 0 1px 22px -4px black;
+    border-bottom: 1px solid $primaryColor;
 
     pre {
       margin-bottom: 15px;
       padding: 0;
       border: none;
+    }
+
+    .example.container img {
+      margin-top: -20px;
     }
 
     .col {

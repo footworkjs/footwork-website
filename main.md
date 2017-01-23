@@ -2,19 +2,34 @@
 layout: home
 ---
 
-# What is it?
+<em class="intro">Footwork is a frontend framework based on [KnockoutJS](http://knockoutjs.com/) that aims to be fully featured, expressive, and easy to use while remaining as idiomatic and compatible with Knockout and its code base as possible.</em>
 
-Footwork is a frontend javascript framework based on [KnockoutJS](http://knockoutjs.com/) that aims to be fully featured, expressive, and easy to use while remaining as idiomatic and compatible with Knockout and its existing code base as possible.
-
-It has features such as:
-
-* Custom elements/components and declarative view models
-* Automatic resolution and binding of declarative resources
-* Page routing with unlimited outlet support
-* Transition effect and animation system including sequenced animations
-* Does not require a build system or module loader (but it works great with them)
-* Inter-module communication and state sharing
-* Much, much more...
+<div class="intro-paragraph">
+  <div class="col-md-6">
+    <ul>
+      <li>Custom elements/components and declarative view models</li>
+      <li>Automatic resolution and binding of declarative resources</li>
+      <li>Page routing with unlimited outlet support</li>
+      <li>Transition effect and animation system including sequenced animations</li>
+      <li>Does not require a build system or module loader (but it works great with them)</li>
+      <li>Inter-module communication and state sharing</li>
+      <li><em>Much, much more...</em></li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <table>
+      <thead>
+        <tr><td colspan="2"><img src="{{ "/assets/images/footwork.svg" | relative_url }}"></td></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="http://knockoutjs.com"><img src="{{ "/assets/images/knockoutjs.png" | relative_url }}"></a></td>
+          <td><a href="http://lodash.com"><img src="{{ "/assets/images/lodash.svg" | relative_url }}"></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 # Why Would I Use It?
 
