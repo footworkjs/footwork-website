@@ -36,10 +36,9 @@ body {
   $madeWithWidth: 200px;
   .made-with {
     width: $madeWithWidth;
-    background: $primaryColor;
+    background: #eee;
     line-height: $madeWithHeight;
     border-radius: 3px;
-    color: white;
     margin: 20px auto 0px auto;
     opacity: 0.8;
     font-weight: bold;
@@ -88,12 +87,14 @@ body {
       width: 50%;
       text-align: center;
 
+      &:last-child > div {
+        margin-left: 10px;
+      }
+
       & > div {
-        margin: 10px;
-        box-shadow: 0 1px 3px -1px black;
         background: #eee;
         border-radius: 3px;
-        padding: 10px;
+        margin-top: 10px;
       }
 
       a {
@@ -101,8 +102,18 @@ body {
         opacity: 0.8;
         color: black;
 
+        &:first-child {
+          padding: 10px;
+          line-height: 25px;
+          font-size: 20px;
+          font-weight: bold;
+          background: rgba(0,0,0,0.1);
+        }
+        &:last-child {
+          padding: 10px;
+        }
+
         img {
-          margin-top: 10px;
           max-height: 55px;
           border-radius: 3px;
           width: auto;
