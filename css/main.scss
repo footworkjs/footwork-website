@@ -30,6 +30,21 @@ body {
   font-size: 18px;
   background: $pageBackground;
   overflow-y: scroll;
+  font-family: 'Roboto', sans-serif;
+
+  $madeWithHeight: 40px;
+  $madeWithWidth: 200px;
+  .made-with {
+    width: $madeWithWidth;
+    background: $primaryColor;
+    line-height: $madeWithHeight;
+    border-radius: 3px;
+    color: white;
+    margin: 20px auto 0px auto;
+    opacity: 0.8;
+    font-weight: bold;
+    text-align: center;
+  }
 
   em.intro {
     display: block;
@@ -41,11 +56,20 @@ body {
 
   .intro-paragraph {
     @include clearblock;
-    margin: 50px 0;
+    margin: 50px 0 0;
 
-    ul li {
-      margin: 10px 0;
+    & > div:first-child {
+      border-right: 1px solid #eee;
     }
+
+    ul {
+      padding-left: 1.2em;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+
 
     em {
       font-weight: bold;
@@ -55,23 +79,38 @@ body {
       width: 80%;
     }
 
-    table {
-      td {
-        padding: 10px;
-        text-align: center;
-      }
+    .made-with-col {
+      text-align: center;
+    }
 
-      thead {
-        border-bottom: 1px solid #aaa;
-      }
+    .col {
+      float: left;
+      width: 50%;
+      text-align: center;
 
-      tbody td {
-        border: 1px solid #aaa;
+      & > div {
+        margin: 10px;
+        box-shadow: 0 1px 3px -1px black;
+        background: #eee;
         border-radius: 3px;
+        padding: 10px;
       }
 
-      img {
-        border-radius: 5px;
+      a {
+        display: block;
+        opacity: 0.8;
+        color: black;
+
+        img {
+          margin-top: 10px;
+          max-height: 55px;
+          border-radius: 3px;
+          width: auto;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }
@@ -95,7 +134,6 @@ body {
   .top-section {
     background: $primaryColor;
     @include clearblock;
-    overflow: hidden;
     border-bottom: 1px solid $primaryColor;
 
     pre {
@@ -106,6 +144,7 @@ body {
 
     .example.container img {
       margin-top: -20px;
+      margin-bottom: -50px;
     }
 
     .col {
@@ -145,7 +184,8 @@ body {
   width: 100%;
   height: $footerHeight;
   line-height: $footerHeight;
-  background-color: darken($primaryColor, 5%);
+  background-color: $primaryColor;
+  color: white;
 }
 
 @import "nav.scss";
