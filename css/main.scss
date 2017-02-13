@@ -15,6 +15,34 @@
   }
 }
 
+.loading-display {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  color: #999;
+  max-width: 66%;
+  margin: 50px auto;
+
+  .loading-message {
+    margin-bottom: 10px;
+  }
+  .glyphicon-refresh {
+    margin-right: 10px;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
 $footerHeight: 60px;
 $primaryColor: #4584e1;
 $pageBackground: #fff;
@@ -166,6 +194,7 @@ body {
 
   main {
     padding: 20px 0;
+    clear: both;
   }
 
   h1 {

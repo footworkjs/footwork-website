@@ -7,7 +7,9 @@
     <router module="Router">
       {% include header.html %}
 
-      <outlet name="main" class="page-content" aria-label="Content"></outlet>
+      <outlet name="main" class="page-content" aria-label="Content">
+        <div class="loading-display"><div class="loading-message">Loading...</div><div class="glyphicon glyphicon-refresh spinner"></div></div>
+      </outlet>
     </router>
 
     {% include footer.html %}

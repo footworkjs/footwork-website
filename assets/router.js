@@ -2,6 +2,8 @@ define(['footwork', 'jquery', 'highlightjs'], function (fw, $) {
   fw.components.registerLocation('main-page', { template: '/main.html' });
   fw.components.registerLocation('about-page', { template: '/about/index.html' });
 
+  var firstLoad = true;
+
   function handleTextResponse (response) {
     if (response.ok) {
       return response.text();
@@ -11,21 +13,31 @@ define(['footwork', 'jquery', 'highlightjs'], function (fw, $) {
   return function Router () {
     var self = fw.router.boot(this, {
       namespace: 'Router',
+      outlet: {
+        loading: function () {
+          if (!firstLoad) {
+            return 'loading-display';
+          }
+          firstLoad = false;
+          return null;
+        },
+        transition: 400
+      },
       routes: [
         {
-          route: '/',
+          path: '/',
           controller: function () {
             this.outlet('main', 'main-page');
           }
         },
         {
-          route: '/about',
+          path: '/about',
           controller: function () {
             this.outlet('main', 'about-page');
           }
         },
         {
-          route: '/news/:year/:month/:day/:post',
+          path: '/news/:year/:month/:day/:post',
           controller: function showNewsBlog (params) {
             console.info(params);
           }

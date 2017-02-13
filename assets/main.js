@@ -36,7 +36,11 @@ require(['footwork', 'lodash', 'router', 'es6-promise', 'fetch', 'bootstrap'],
     });
 
     fw.router.register('Router', Router);
-    fw.components.registerLocation(['docs-list', 'blog-posts'], '/js/', true);
+    fw.components.registerLocation(['docs-list', 'blog-posts', 'code-view'], '/js/', true);
+    fw.components.register('loading-display', {
+      template: '<div class="loading-display fadeInUp"><div class="loading-message">Loading...</div><div class="glyphicon glyphicon-refresh spinner"></div></div>',
+      synchronous: true
+    });
 
     fw.start();
 
