@@ -1,6 +1,7 @@
 define(['footwork', 'jquery', 'highlightjs'], function (fw, $) {
   fw.components.registerLocation('main-page', { template: '/main.html' });
   fw.components.registerLocation('about-page', { template: '/about/index.html' });
+  fw.components.registerLocation('get-started-page', { template: '/get-started/index.html' });
 
   var firstLoad = true;
 
@@ -21,7 +22,12 @@ define(['footwork', 'jquery', 'highlightjs'], function (fw, $) {
           firstLoad = false;
           return null;
         },
-        transition: 400
+        transition: 400,
+        onComplete: function () {
+          $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+          });
+        }
       },
       routes: [
         {
@@ -34,6 +40,12 @@ define(['footwork', 'jquery', 'highlightjs'], function (fw, $) {
           path: '/about',
           controller: function () {
             this.outlet('main', 'about-page');
+          }
+        },
+        {
+          path: '/get-started',
+          controller: function () {
+            this.outlet('main', 'get-started-page');
           }
         },
         {

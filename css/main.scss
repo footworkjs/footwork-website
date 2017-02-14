@@ -2,6 +2,8 @@
 # Main Styles
 ---
 
+@import "variables";
+
 @mixin clearblock() {
   display: block;
 
@@ -45,7 +47,7 @@
 
 $footerHeight: 60px;
 $primaryColor: #4584e1;
-$pageBackground: #fff;
+$pageBackground: #efefef;
 
 html {
   position: relative;
@@ -62,6 +64,10 @@ body {
 
   .why-use {
     margin: 30px 0;
+
+    h1 + p {
+      margin-top: 30px;
+    }
 
     .well {
       margin-top: 40px;
@@ -83,27 +89,7 @@ body {
   $introLeftSpacing: 80px;
   $introIconSize: 30px;
   .intro {
-    position: relative;
-    display: block;
-    font-style: normal;
-    font-size: 20px;
-    margin-top: 70px;
-    padding: 20px 20px 20px $introLeftSpacing;
-    background: #eee;
-    border-radius: 3px;
-    border: 1px solid #ddd;
-    color: #555;
     text-align: center;
-
-    .glyphicon {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      margin-top: -($introIconSize / 2);
-      width: $introLeftSpacing;
-      text-align: center;
-      font-size: $introIconSize;
-    }
   }
 
   .intro-paragraph {
@@ -155,7 +141,7 @@ body {
       }
 
       & > div {
-        background: #eee;
+        background: darken($pageBackground, 10%);
         border-radius: 3px;
         margin-top: 10px;
       }
@@ -195,6 +181,15 @@ body {
   main {
     padding: 20px 0;
     clear: both;
+
+    pre {
+      padding: 0;
+      border-radius: 0;
+    }
+
+    p {
+      margin: 15px 0;
+    }
   }
 
   h1 {
@@ -278,6 +273,10 @@ body {
   line-height: $footerHeight;
   background-color: $primaryColor;
   color: white;
+
+  .links {
+    float: right;
+  }
 }
 
-@import "nav.scss";
+@import "nav";

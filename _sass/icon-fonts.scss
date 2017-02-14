@@ -1,0 +1,38 @@
+@import "variables";
+
+@font-face {
+  font-family: 'footwork-website';
+  src:
+    url('#{$icomoon-font-path}/footwork-website.ttf?wkqk2q') format('truetype'),
+    url('#{$icomoon-font-path}/footwork-website.woff?wkqk2q') format('woff'),
+    url('#{$icomoon-font-path}/footwork-website.svg?wkqk2q#footwork-website') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'footwork-website' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home {
+  &:before {
+    content: $icon-home;
+  }
+}
+.icon-mark-github {
+  &:before {
+    content: $icon-mark-github;
+  }
+}
+
