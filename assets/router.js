@@ -3,8 +3,6 @@ define(['footwork', 'jquery', 'highlightjs'], function (fw, $) {
   fw.components.registerLocation('about-page', { template: '/about/index.html' });
   fw.components.registerLocation('get-started-page', { template: '/get-started/index.html' });
 
-  var firstLoad = true;
-
   function handleTextResponse (response) {
     if (response.ok) {
       return response.text();
@@ -15,13 +13,7 @@ define(['footwork', 'jquery', 'highlightjs'], function (fw, $) {
     var self = fw.router.boot(this, {
       namespace: 'Router',
       outlet: {
-        loading: function () {
-          if (!firstLoad) {
-            return 'loading-display';
-          }
-          firstLoad = false;
-          return null;
-        },
+        loading: 'loading-display',
         transition: 400,
         onComplete: function () {
           $('pre code').each(function(i, block) {

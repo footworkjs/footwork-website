@@ -9,6 +9,7 @@ require.config({
     "highlightjs": "/assets/bower_components/highlightjs/highlight.pack",
     "router": "/assets/router",
     "tether": "/assets/bower_components/tether/dist/js/tether",
+    "history": "/assets/bower_components/html5-history-api/history",
     "bootstrap": "/assets/bower_components/bootstrap/dist/js/bootstrap",
     "expose-tether":  "/assets/expose-tether",
   },
@@ -22,7 +23,7 @@ require.config({
   },
 });
 
-require(['footwork', 'lodash', 'router', 'es6-promise', 'fetch', 'bootstrap'],
+require(['footwork', 'lodash', 'router', 'es6-promise', 'fetch', 'history', 'bootstrap'],
   function (fw, _, Router, promise) {
     promise.polyfill();
 

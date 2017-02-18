@@ -45,10 +45,6 @@
   animation-timing-function: linear;
 }
 
-$footerHeight: 60px;
-$primaryColor: #4584e1;
-$pageBackground: #efefef;
-
 html {
   position: relative;
   min-height: 100%;
@@ -61,6 +57,10 @@ body {
   background: $pageBackground;
   overflow-y: scroll;
   font-family: 'Roboto', sans-serif;
+
+  em {
+    font-weight: bold;
+  }
 
   .why-use {
     margin: 30px 0;
@@ -94,7 +94,6 @@ body {
 
   .intro-paragraph {
     @include clearblock;
-    margin: 30px 0 0;
 
     & > div {
       padding: 15px;
@@ -111,11 +110,6 @@ body {
       li {
         margin: 10px 0;
       }
-    }
-
-
-    em {
-      font-weight: bold;
     }
 
     img {
@@ -205,9 +199,8 @@ body {
   }
 
   .top-section {
-    background: $primaryColor;
+    background: darken($primaryColor, 5%);
     @include clearblock;
-    border-bottom: 1px solid $primaryColor;
 
     pre {
       margin-bottom: 15px;

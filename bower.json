@@ -15,13 +15,14 @@
   },
   "dependencies": {
     "jquery": "*",
-    "footwork": "#9ad57d64bf8b06144b1f9b7a59dcf65b66a7066b",
+    "footwork": "#d7a274b5ed2e36f8e3112adc2f5d872a414df035",
     "bootstrap": "v3.3.7",
     "requirejs": "^2.3.2",
     "text": "requirejs-text#^2.0.15",
     "es6-promise": "^4.0.5",
     "fetch": "^2.0.1",
     "lodash": "^4.17.4",
-    "highlightjs": "^9.9.0"
+    "highlightjs": "^9.9.0",
+    "html5-history-api": "^4.2.7"
   }
 }

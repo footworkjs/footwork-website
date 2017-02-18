@@ -19,7 +19,7 @@ header {
     }
 
     a.active {
-      background: rgba(0,0,0,0.1);
+      background: darken($primaryColor, 5%);
     }
   }
 
@@ -102,6 +102,7 @@ header {
 
     .logo {
       height: 40px;
+      width: 253px;
       position: relative;
       float: left;
       top: ($navHeight / 2);

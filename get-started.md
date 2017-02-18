@@ -5,7 +5,12 @@ align: left
 permalink: /get-started/
 ---
 
-This page describes the basic steps on how to download and start a Footwork application, for full information please see [the full documentation](http://docs.footworkjs.com/release/latest).
+# Get Started
+
+New to Footwork? Here are a few specific things you might want to check out first:
+
+* [Architecture / Overall Philosophy](http://docs.footworkjs.com/release/latest/architecture/)
+* [Latest Documentation](http://docs.footworkjs.com/release/latest)
 
 ## Installing
 
