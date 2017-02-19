@@ -1,7 +1,8 @@
 define(['footwork', 'jquery', 'highlightjs'], function (fw, $) {
   fw.components.registerLocation('main-page', { template: '/main.html' });
-  fw.components.registerLocation('about-page', { template: '/about/index.html' });
+  fw.components.registerLocation('info-page', { template: '/info/index.html' });
   fw.components.registerLocation('get-started-page', { template: '/get-started/index.html' });
+  fw.components.registerLocation('documentation-page', { template: '/documentation/index.html' });
 
   function handleTextResponse (response) {
     if (response.ok) {
@@ -29,9 +30,15 @@ define(['footwork', 'jquery', 'highlightjs'], function (fw, $) {
           }
         },
         {
-          path: '/about',
+          path: '/info',
           controller: function () {
-            this.outlet('main', 'about-page');
+            this.outlet('main', 'info-page');
+          }
+        },
+        {
+          path: '/documentation',
+          controller: function () {
+            this.outlet('main', 'documentation-page');
           }
         },
         {

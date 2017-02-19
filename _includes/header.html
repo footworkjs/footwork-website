@@ -5,45 +5,29 @@
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
         </button>
         <a href="{{ "/" | relative_url}}" data-bind="route"><img class="logo" src="{{ "/assets/images/footwork-white.svg" | relative_url}}" alt="Footwork Home"></a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li>
-            <a class="nav-link" href="/" data-bind="route">Home</a>
+            <a class="nav-link" href="/" data-bind="route"><span class="icon-home"></span></a>
           </li>
-
-          {% for my_page in site.pages %}
-            {% if my_page.title and my_page.align != 'right' %}
-              <li>
-                <a class="nav-link" href="{{ my_page.url | relative_url }}" data-bind="route">{{ my_page.title | escape }}</a>
-              </li>
-            {% endif %}
-          {% endfor %}
-
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="closed glyphicon glyphicon-menu-down"></span><span class="open glyphicon glyphicon-menu-up"></span></a>
-            <ul class="dropdown-menu">
-              <docs-list></docs-list>
-              <li role="separator" class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
+          <li>
+            <a class="nav-link" href="/get-started/" data-bind="route">Get Started</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/documentation/" data-bind="route">Documentation</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          {% for my_page in site.pages %}
-            {% if my_page.title and my_page.align == 'right' %}
-              <li>
-                <a class="nav-link" href="{{ my_page.url | relative_url }}" data-bind="route">{{ my_page.title | escape }}</a>
-              </li>
-            {% endif %}
-          {% endfor %}
+          <li>
+            <a href="/info/" data-bind="route"><span class="glyphicon glyphicon-info-sign"></span></a>
+          </li>
+          <li>
+            <a href="{{ site.project_github }}"><span class="icon-mark-github"></span></a>
+          </li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

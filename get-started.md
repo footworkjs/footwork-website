@@ -7,6 +7,8 @@ permalink: /get-started/
 
 # Get Started
 
+The 
+
 New to Footwork? Here are a few specific things you might want to check out first:
 
 * [Architecture / Overall Philosophy](http://docs.footworkjs.com/release/latest/architecture/)

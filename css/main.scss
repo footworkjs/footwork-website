@@ -3,6 +3,7 @@
 ---
 
 @import "variables";
+@import "icon-fonts";
 
 @mixin clearblock() {
   display: block;
@@ -256,6 +257,18 @@ body {
 
   .links {
     float: right;
+
+    a {
+      color: white;
+      opacity: 0.7;
+      text-decoration: none;
+      font-size: 30px;
+
+      &:hover {
+        opacity: 1;
+        text-decoration: none;
+      }
+    }
   }
 }
 

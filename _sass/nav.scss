@@ -32,53 +32,6 @@ header {
     margin: 0;
     box-shadow: 0 -10px 30px black;
 
-    .dropdown {
-      .glyphicon {
-        margin-left: 10px;
-        font-size: 15px;
-      }
-
-      a {
-        .closed {
-          display: inline;
-        }
-        .open {
-          display: none;
-        }
-      }
-
-      &.open a {
-        .open {
-          display: inline;
-        }
-        .closed {
-          display: none;
-        }
-      }
-    }
-
-    .dropdown-header {
-      color: white;
-    }
-
-    .dropdown-menu {
-      border: none;
-      background: lighten($navColor, 10%);
-      color: white;
-
-      .divider {
-        background-color: darken($navColor, 10%);
-      }
-
-      a {
-        color: lighten($navColor, 30%);
-
-        &:hover {
-          color: white;
-        }
-      }
-    }
-
     li > a {
       color: white;
 
