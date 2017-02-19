@@ -58,10 +58,6 @@ body {
   overflow-y: scroll;
   font-family: 'Roboto', sans-serif;
 
-  em {
-    font-weight: bold;
-  }
-
   .why-use {
     margin: 30px 0;
 
@@ -94,15 +90,6 @@ body {
 
   .intro-paragraph {
     @include clearblock;
-
-    & > div {
-      padding: 15px;
-
-      &:last-child {
-        padding-right: 0;
-        padding-left: 0;
-      }
-    }
 
     ul {
       padding-left: 1.2em;
