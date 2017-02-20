@@ -1,1 +1,35 @@
-docs-list.html
+---
+---
+<table class="releases">
+  <thead>
+    <tr>
+      <td>Documentation</td>
+      <td>Downloads</td>
+    </tr>
+  </thead>
+  <tbody data-bind="foreach: docList">
+    <tr class="release">
+      <td>
+        <a class="doc-link" href="{{ site.docs_site }}/release/" data-bind="text: label, attr: { href: docUrl }"></a>
+      </td>
+      <td class="download-links">
+        <!-- ko if: isRelease -->
+          <a class="download-link" data-bind="attr: { href: downloadZip }"><span class="link-content"><span class="glyphicon glyphicon-compressed"></span>footwork-docs-<span data-bind="text: version"></span><em>.zip</em></span></a>
+          <a class="download-link" data-bind="attr: { href: downloadTGZ }"><span class="link-content"><span class="glyphicon glyphicon-compressed"></span> footwork-docs-<span data-bind="text: version"></span><em>.tar.gz</em></span></a>
+        <!-- /ko -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<div class="archive releases">
+  <p class="title">For archival purposes, older versions are listed here (these use the older style documentation):</p>
+
+  <!-- ko foreach: archivedDocsList -->
+    <div class="release">
+      <a class="doc-link" data-bind="text: label, attr: { href: docUrl }"></a>
+    </div>
+  <!-- /ko -->
+</div>

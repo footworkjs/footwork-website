@@ -25,32 +25,30 @@ define(['footwork', 'jquery', 'highlightjs'], function (fw, $) {
       routes: [
         {
           path: '/',
+          title: 'Footwork',
           controller: function () {
             this.outlet('main', 'main-page');
           }
         },
         {
           path: '/info',
+          title: 'Footwork - Info',
           controller: function () {
             this.outlet('main', 'info-page');
           }
         },
         {
           path: '/documentation',
+          title: 'Footwork - Documentation',
           controller: function () {
             this.outlet('main', 'documentation-page');
           }
         },
         {
           path: '/get-started',
+          title: 'Footwork - Get Started',
           controller: function () {
             this.outlet('main', 'get-started-page');
-          }
-        },
-        {
-          path: '/news/:year/:month/:day/:post',
-          controller: function showNewsBlog (params) {
-            console.info(params);
           }
         }
       ]

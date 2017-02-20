@@ -32,10 +32,6 @@ require(['footwork', 'lodash', 'router', 'es6-promise', 'fetch', 'history', 'boo
       mode: 'cors'
     };
 
-    _.each(window.posts, function (post) {
-      console.info(post);
-    });
-
     fw.router.register('Router', Router);
     fw.components.registerLocation(['docs-list', 'blog-posts', 'code-view'], '/js/', true);
     fw.components.register('loading-display', {

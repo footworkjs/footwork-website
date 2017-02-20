@@ -6,7 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jonbnewman
 github_username:  jonbnewman
-docs_list_endpoint: "http://docs.footworkjs.com/list-releases.php"
+docs_site: http://docs.footworkjs.com
 project_github: https://github.com/footworkjs/footwork
 
 # Build settings
