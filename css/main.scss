@@ -54,7 +54,7 @@ html {
 
 body {
   margin-bottom: $footerHeight;
-  font-size: 18px;
+  font-size: 16px;
   background: $pageBackground;
   overflow-y: scroll;
   font-family: 'Roboto', sans-serif;
@@ -87,6 +87,7 @@ body {
   $introIconSize: 30px;
   .intro {
     text-align: center;
+    font-size: 20px;
   }
 
   .intro-paragraph {
@@ -104,7 +105,7 @@ body {
 
     .made-with-col {
       text-align: center;
-      margin-top: 20px;
+      margin: 20px 0;
     }
 
     .col {
