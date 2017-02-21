@@ -83,7 +83,9 @@ fw.viewModel.register('Person', function (params) {
 fw.start();
 ```
 
-There are several different types of view models and ways to create them. Some have additional features or advantages depending on your needed use, see [Creating View Models](http://docs.footworkjs.com/release/latest/architecture/#creating-view-models)
+There are several different types of view models and ways to create them. Some have additional features or advantages depending on your needed use, see [Creating View Models](http://docs.footworkjs.com/release/latest/architecture/#creating-view-models).
+
+For further reading on how Footwork applications are structured and work in general, see the [architecture documentation](http://docs.footworkjs.com/release/latest/architecture/).
 
 ### Starting The Application
 

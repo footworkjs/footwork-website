@@ -11,4 +11,18 @@ permalink: /info/
 
 [![Build Status](https://saucelabs.com/browser-matrix/reflectiv.svg)](https://saucelabs.com/u/reflectiv)
 
+## Frequently Asked Questions
+
+### Why no IE8 support?
+
+Microsoft has end-of-lifed it, and very very few people are using it these days.
+
+### What about ES6?
+
+Footwork is based on and will continue to be based on and follow KnockoutJS and its API. At present the public release of KnockoutJS is ES5-based, and so Footwork is too.
+
+In the near future, Footwork will have its separate modules separated and converted to ES6 for use with [Knockout TKO](https://github.com/knockout/tko) - the future of Knockout still in development that is updated for ES6+.
+
+### Who made Footwork?
+
 Footwork is a project created and maintained by [Jonathan Newman](https://github.com/jonbnewman).
