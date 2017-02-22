@@ -87,42 +87,6 @@ There are several different types of view models and ways to create them. Some h
 
 For further reading on how Footwork applications are structured and work in general, see the [architecture documentation](http://docs.footworkjs.com/release/latest/architecture/).
 
-### Starting The Application
-
-There are two ways of kickstarting your application:
-
-* `fw.start`
-
-    Using this method you can simply tell Footwork to start processing the DOM. Instantiation of your application then depends on the declarative elements that you define in the view.
-
-    ```javascript
-    fw.start();
-    ```
-
-    You can optionally pass it a root-node you want it to begin processing on (by default it assumes `document.body`):
-
-    ```javascript
-    fw.start(document.getElementById('my-app'));
-    ```
-
-    Once `fw.start` has been called all descendant declarations to the root node will be processed. This means any nested viewModels/components/etc will be instantiated and bound per their registrations/configurations/etc.
-
-* `fw.applyBindings`
-
-    This method allows you to instantiate and bind a specific view model when binding to the view.
-
-    ```javascript
-    fw.applyBindings(new MyViewModel());
-    ```
-
-    You can optionally pass it a root-node you want it to begin processing on (by default it assumes `document.body`):
-
-    ```javascript
-    fw.applyBindings(new MyViewModel(), document.getElementById('my-app'));
-    ```
-
-    Once `fw.applyBindings` has been called all descendant declarations to the root node will be processed as well. This means any nested viewModels/components/etc will be instantiated and bound per their registrations/configurations/etc.
-
 ## Browser Support and Polyfills
 
 Footwork is an ES5-based library and utilizes a few of the newer ES6/HTML5 features such as:

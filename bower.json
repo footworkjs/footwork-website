@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "jquery": "*",
-    "footwork": "#d7a274b5ed2e36f8e3112adc2f5d872a414df035",
+    "footwork": "2.0.1",
     "bootstrap": "v3.3.7",
     "requirejs": "^2.3.2",
     "text": "requirejs-text#^2.0.15",

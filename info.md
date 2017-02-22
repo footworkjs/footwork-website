@@ -13,6 +13,8 @@ permalink: /info/
 
 ## Frequently Asked Questions
 
+<hr>
+
 ### Why no IE8 support?
 
 Microsoft has end-of-lifed it, and very very few people are using it these days.
@@ -26,3 +28,11 @@ In the near future, Footwork will have its separate modules separated and conver
 ### Who made Footwork?
 
 Footwork is a project created and maintained by [Jonathan Newman](https://github.com/jonbnewman).
+
+It is supported and utilized for internal and external facing applications at [LegalAccess Plans LLC](http://legalaccessplans.com/).
+
+### Can I use it for my project?
+
+Yes! Footwork is developed with a long-term future in mind, is well tested, and currently used in a production environment.
+
+The more projects that utilize and provide feedback for Footwork, the better. Please get involved!

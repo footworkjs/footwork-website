@@ -50,6 +50,10 @@ html {
   position: relative;
   min-height: 100%;
   background: $pageBackground;
+
+  hr {
+    border-color: #bbb;
+  }
 }
 
 body {
